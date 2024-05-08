@@ -6,6 +6,7 @@ import ProductionQuantityLimitsIcon from '@mui/icons-material/ProductionQuantity
 import BorderStyleIcon from '@mui/icons-material/BorderStyle';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import LogoutIcon from '@mui/icons-material/Logout';
+import CategoryIcon from '@mui/icons-material/Category';
 
 const Sidebar = () => {
   return (
@@ -41,6 +42,12 @@ const Sidebar = () => {
         <BorderStyleIcon className="icon" />
         <span>Orders</span>
       </li>
+      <Link to="/Mylist">
+      <li>
+        <CategoryIcon className="icon" />
+        <span>Categories</span>
+      </li>
+      </Link>
       <p className="title">USER</p>
       <li>
         <AccountCircleIcon className="icon" />
