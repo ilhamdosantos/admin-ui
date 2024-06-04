@@ -5,7 +5,7 @@ import Login from "./pages/login/Login";
 import List from "./pages/list/List";
 import Single from "./pages/single/Single";
 import New from "./pages/new/New";
-import MyList from "./pages/mylist/Mylist";
+import Mylist from "./pages/mylist/Mylist";
 import "./style/dark.scss";
 import { useContext } from "react";
 import { DarkModeContext } from "./context/darkModeContext";
@@ -38,7 +38,7 @@ function App() {
               />
             </Route>
             <Route path="mylist"> 
-            <Route index element={<MyList />}></Route>
+            <Route index element={<Mylist />}></Route>
             </Route>
           </Route>
         </Routes>
