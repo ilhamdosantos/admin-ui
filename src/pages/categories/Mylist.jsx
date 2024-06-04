@@ -1,7 +1,6 @@
 import "./mylist.scss";
 import Sidebar from "../../components/sidebar/Sidebar";
 import Navbar from "../../components/navbar/Navbar";
-import Widget from "../../components/widget2/Widget2";
 import Datatable from "../../components/mydatatable/Mydatatable";
 
 
