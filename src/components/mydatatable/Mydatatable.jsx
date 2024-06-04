@@ -1,41 +1,31 @@
 import "./mydatatable.scss";
 import { DataGrid } from "@mui/x-data-grid";
-import { Link } from "react-router-dom";
 
 const columns = [
   { field: "id", headerName: "ID", width: 70 },
-  { field: "firstName", headerName: "First name", width: 130 },
-
- 
+  { field: "name", headerName: "Name", width: 130 },
 ];
 
 const rows = [
-  { id: 1, firstName: "Coffe"},
-  { id: 2, firstName: "Non Coffe"},
-  { id: 3, firstName: "Cake"},
-  { id: 4, firstName: "Pastry"},
-  { id: 5, firstName: "Cookie",},
-
+  { id: 1, name: "Coffee" },
+  { id: 2, name: "Non Coffee" },
+  { id: 3, name: "Cake" },
+  { id: 4, name: "Pastry" },
+  { id: 5, name: "Cookie" },
+  { id: 6, name: "Candy" },
+  { id: 7, name: "Rice" },
+  { id: 8, name: "Pasta" },
+  { id: 9, name: "Salad" },
+  { id: 10, name: "Steak" },
 ];
 
-const actionColumn = [
-  {
-
-    width: 200,
-    
-    },
-];
-
-const Mydatatable = () => {
+const MyDatatable = ({ title }) => {
   return (
-    <div className="mydatatable">
-      <div className="mydatatableTitle">
-        ALL DATA
-       
-      </div>
+    <div className="myDatatable">
+      <div className="myDatatableTitle">{title}</div>
       <DataGrid
         rows={rows}
-        columns={columns.concat(actionColumn)}
+        columns={columns}
         initialState={{
           pagination: {
             paginationModel: { page: 0, pageSize: 5 },
@@ -48,4 +38,4 @@ const Mydatatable = () => {
   );
 };
 
-export default Mydatatable;
+export default MyDatatable;
