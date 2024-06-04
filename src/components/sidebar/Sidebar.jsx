@@ -1,72 +1,74 @@
-import "./sidebar.scss";
+import "./sidebar.scss"
 import { Link } from "react-router-dom";
-import DashboardIcon from "@mui/icons-material/Dashboard";
-import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
-import CreditCardIcon from "@mui/icons-material/CreditCard";
-import StoreIcon from "@mui/icons-material/Store";
-import ExitToAppIcon from "@mui/icons-material/ExitToApp";
-import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
-import CategoryIcon from "@mui/icons-material/Category";
+import DashboardIcon from '@mui/icons-material/Dashboard';
+import PersonIcon from '@mui/icons-material/Person';
+import ProductionQuantityLimitsIcon from '@mui/icons-material/ProductionQuantityLimits';
+import BorderStyleIcon from '@mui/icons-material/BorderStyle';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import LogoutIcon from '@mui/icons-material/Logout';
+import CategoryIcon from '@mui/icons-material/Category';
 import { DarkModeContext } from "../../context/darkModeContext";
 import { useContext } from "react";
 
 const Sidebar = () => {
   const {dispatch} = useContext(DarkModeContext);
-  return (
-    <div className="sidebar">
-      <div className="top">
-        <Link to="/">
-          <span className="logo">Store</span>
-        </Link>
-      </div>
-      <hr />
-      <div className="center">
-        <ul>
-          <p className="title">MAIN</p>
-          <li>
-            <DashboardIcon className="icon" />
-            <span>Dashboard</span>
-          </li>
-          <p className="title">LIST</p>
-          <Link to="/users">
-            <li>
-              <PersonOutlineIcon className="icon" />
-              <span>Users</span>
-            </li>
-          </Link>
-          <Link to="/products">
-            <li>
-              <CreditCardIcon className="icon" />
-              <span>Products</span>
-            </li>
-          </Link>
-          <li>
-            <StoreIcon className="icon" />
-            <span>Orders</span>
-          </li>
-          <Link to="/categories">
-            <li>
-              <CategoryIcon className="icon" />
-              <span>Categories</span>
-            </li>
-          </Link>
-          <p className="title">USER</p>
-          <li>
-            <AccountCircleOutlinedIcon className="icon" />
-            <span>Profile</span>
-          </li>
-          <li>
-            <ExitToAppIcon className="icon" />
-            <span>Logout</span>
-          </li>
-        </ul>
-      </div>
-      <div className="bottom">
-        <div className="colorOption" onClick={() => dispatch({type:"LIGHT"})}></div>
-        <div className="colorOption" onClick={() => dispatch({type:"DARK"})}></div>
-      </div>
-    </div>
-  );
-};
 
-export default Sidebar;
+  return (
+
+    <div className="sidebar">
+  <div className="top">
+    <Link to="/">
+      <span className="logo">Store</span>
+    </Link>
+  </div>
+  <hr />
+  <div className="center">
+    <ul>
+      <p className="title">MAIN</p>
+      <li>
+        <DashboardIcon className="icon" />
+        <span>Dashboard</span>
+      </li>
+      <p className="title">LIST</p>
+      <Link to="/users">
+        <li>
+          <PersonIcon className="icon" />
+          <span>Users</span>
+        </li>
+      </Link>
+      <Link to="/products">
+        <li>
+            <ProductionQuantityLimitsIcon className="icon" />
+          <span>Products</span>
+        </li>
+      </Link>
+      <li>
+        <BorderStyleIcon className="icon" />
+        <span>Orders</span>
+      </li>
+      <Link to="/Mylist">
+      <li>
+        <CategoryIcon className="icon" />
+        <span>Categories</span>
+      </li>
+      </Link>
+      <p className="title">USER</p>
+      <li>
+        <AccountCircleIcon className="icon" />
+        <span>Profile</span>
+      </li>
+      <li>
+        <LogoutIcon className="icon" />
+        <span>Logout</span>
+      </li>
+    </ul>
+  </div>
+  <div className="bottom">
+    <div className="colorOption" onClick={()=>dispatch({type:"LIGHT"})}></div>
+    <div className="colorOption" onClick={()=>dispatch({type:"DARK"})}></div>
+  </div>
+</div>
+  )
+}
+
+export default Sidebar
