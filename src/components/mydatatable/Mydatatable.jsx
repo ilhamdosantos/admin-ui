@@ -17,6 +17,7 @@ const rows = [
   { id: 8, name: "Pasta" },
   { id: 9, name: "Salad" },
   { id: 10, name: "Steak" },
+  { id: 11, name: "Gorengan" },
 ];
 
 const MyDatatable = ({ title }) => {
